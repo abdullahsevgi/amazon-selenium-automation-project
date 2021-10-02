@@ -1,4 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: Test_Add_Product_To_Cart
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.329 s - in Test_Add_Product_To_Cart
+Tests run: 4, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.712 s <<< FAILURE! - in Test_Add_Product_To_Cart
+selectProduct  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at Test_Add_Product_To_Cart.selectProduct(Test_Add_Product_To_Cart.java:27)
+
+addProductCart  Time elapsed: 0.025 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#add\-to\-cart\-button"}
+  (Session info: chrome=94.0.4606.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DELL', ip: '192.168.1.37', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\abdullah\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 62deeaf51bb2f9186cd9ad8290cd847b
+*** Element info: {Using=id, value=add-to-cart-button}
+	at Test_Add_Product_To_Cart.addProductCart(Test_Add_Product_To_Cart.java:35)
+
+go_To_Cart  Time elapsed: 0.774 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Urun Sepete Eklenemedi! ==> expected: <true> but was: <false>
+	at Test_Add_Product_To_Cart.go_To_Cart(Test_Add_Product_To_Cart.java:45)
+
